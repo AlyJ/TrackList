@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CAP-I6-Lcj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Track list-->
+        <scene sceneID="LLD-ah-zSH">
+            <objects>
+                <tableViewController id="kaR-9q-1mZ" customClass="TrackListTableTableViewController" customModule="TrackList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="voG-FU-hON">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackListCell" rowHeight="52" id="3EZ-Rt-MPn">
+                                <rect key="frame" x="0.0" y="28" width="414" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3EZ-Rt-MPn" id="P5V-7w-WL0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="e2K-Zh-5ed" kind="show" id="hwg-Yy-CT5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kaR-9q-1mZ" id="RlU-De-POI"/>
+                            <outlet property="delegate" destination="kaR-9q-1mZ" id="zY4-Mo-IBe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Track list" id="qlC-P2-DzW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQF-wN-gkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828.985507246377" y="120.53571428571428"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DM0-Ak-P4v">
+            <objects>
+                <viewController id="e2K-Zh-5ed" customClass="DetailViewController" customModule="TrackList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egP-Xg-q49">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="akv-Yw-Lat">
+                                <rect key="frame" x="87" y="176" width="240" height="324"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dj Khaled - father of" translatesAutoresizingMaskIntoConstraints="NO" id="u1g-aR-6m4">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="gEb-HW-fZB"/>
+                                            <constraint firstAttribute="width" constant="240" id="nNJ-yZ-Raa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-Dh-63Q">
+                                        <rect key="frame" x="0.0" y="271" width="240" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="T4f-c3-34y"/>
+                                            <constraint firstAttribute="width" constant="240" id="bFJ-B3-aKM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="akv-Yw-Lat" firstAttribute="centerX" secondItem="egP-Xg-q49" secondAttribute="centerX" id="2LZ-cE-jqy"/>
+                            <constraint firstItem="akv-Yw-Lat" firstAttribute="centerY" secondItem="egP-Xg-q49" secondAttribute="centerY" constant="-110" id="m35-pB-GAg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tyC-19-saV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kYZ-UU-TBF"/>
+                    <connections>
+                        <outlet property="trackImageView" destination="u1g-aR-6m4" id="BxB-8N-zM0"/>
+                        <outlet property="trackNameLabel" destination="ckX-Dh-63Q" id="Mrk-uL-chE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="155-Yn-IK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3620.289855072464" y="122.54464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tm1-x9-1oG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CAP-I6-Lcj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7VV-0z-GuJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kaR-9q-1mZ" kind="relationship" relationship="rootViewController" id="Tqh-3g-cme"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRu-YU-Nwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918.840579710145" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dj Khaled - father of" width="450" height="462"/>
+    </resources>
+</document>

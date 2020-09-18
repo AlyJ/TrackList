@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		12579EC62514F8C400F4C386 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579EC52514F8C400F4C386 /* AppDelegate.swift */; };
 		12579EC82514F8C400F4C386 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579EC72514F8C400F4C386 /* SceneDelegate.swift */; };
-		12579ECA2514F8C400F4C386 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579EC92514F8C400F4C386 /* ViewController.swift */; };
 		12579ECD2514F8C400F4C386 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12579ECB2514F8C400F4C386 /* Main.storyboard */; };
 		12579ECF2514F8D200F4C386 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12579ECE2514F8D200F4C386 /* Assets.xcassets */; };
 		12579ED22514F8D300F4C386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12579ED02514F8D300F4C386 /* LaunchScreen.storyboard */; };
+		12579EDA2514FCFB00F4C386 /* TrackListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579ED92514FCFB00F4C386 /* TrackListTableTableViewController.swift */; };
+		12579EDC2514FD2800F4C386 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579EDB2514FD2800F4C386 /* DetailViewController.swift */; };
+		12579EE325155CF900F4C386 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579EE225155CF900F4C386 /* Song.swift */; };
+		12579EE625155DE500F4C386 /* datamanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12579EE525155DE500F4C386 /* datamanager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12579EC22514F8C400F4C386 /* TrackList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12579EC52514F8C400F4C386 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12579EC72514F8C400F4C386 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12579EC92514F8C400F4C386 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		12579ECC2514F8C400F4C386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12579ECE2514F8D200F4C386 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12579ED12514F8D300F4C386 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12579ED32514F8D300F4C386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12579ED92514FCFB00F4C386 /* TrackListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableTableViewController.swift; sourceTree = "<group>"; };
+		12579EDB2514FD2800F4C386 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		12579EE225155CF900F4C386 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		12579EE525155DE500F4C386 /* datamanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datamanager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		12579EC42514F8C400F4C386 /* TrackList */ = {
 			isa = PBXGroup;
 			children = (
-				12579EC52514F8C400F4C386 /* AppDelegate.swift */,
-				12579EC72514F8C400F4C386 /* SceneDelegate.swift */,
-				12579EC92514F8C400F4C386 /* ViewController.swift */,
-				12579ECB2514F8C400F4C386 /* Main.storyboard */,
+				12579EE425155DD200F4C386 /* datamanager */,
+				12579EE125155CD500F4C386 /* Modal */,
+				12579EDD25155C5E00F4C386 /* delegate */,
+				12579EDE25155CA700F4C386 /* View */,
+				12579EDF25155CB600F4C386 /* Controllers */,
 				12579ECE2514F8D200F4C386 /* Assets.xcassets */,
 				12579ED02514F8D300F4C386 /* LaunchScreen.storyboard */,
 				12579ED32514F8D300F4C386 /* Info.plist */,
 			);
 			path = TrackList;
+			sourceTree = "<group>";
+		};
+		12579EDD25155C5E00F4C386 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				12579EC72514F8C400F4C386 /* SceneDelegate.swift */,
+				12579EC52514F8C400F4C386 /* AppDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		12579EDE25155CA700F4C386 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12579ECB2514F8C400F4C386 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		12579EDF25155CB600F4C386 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12579EDB2514FD2800F4C386 /* DetailViewController.swift */,
+				12579ED92514FCFB00F4C386 /* TrackListTableTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		12579EE125155CD500F4C386 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				12579EE225155CF900F4C386 /* Song.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		12579EE425155DD200F4C386 /* datamanager */ = {
+			isa = PBXGroup;
+			children = (
+				12579EE525155DE500F4C386 /* datamanager.swift */,
+			);
+			path = datamanager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12579ECA2514F8C400F4C386 /* ViewController.swift in Sources */,
+				12579EDA2514FCFB00F4C386 /* TrackListTableTableViewController.swift in Sources */,
+				12579EE625155DE500F4C386 /* datamanager.swift in Sources */,
 				12579EC62514F8C400F4C386 /* AppDelegate.swift in Sources */,
 				12579EC82514F8C400F4C386 /* SceneDelegate.swift in Sources */,
+				12579EDC2514FD2800F4C386 /* DetailViewController.swift in Sources */,
+				12579EE325155CF900F4C386 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
