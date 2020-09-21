@@ -95,6 +95,7 @@ class TrackListTableTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath){
         let currentTrack = songs.remove(at: fromIndexPath.row)
         songs.insert(currentTrack, at: to.row)
+        tableView.reloadData()
     }
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
